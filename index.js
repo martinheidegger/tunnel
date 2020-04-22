@@ -5,13 +5,16 @@ const pump = require('pump')
 exports.Local = tcp.Local
 
 exports.Remote = class Remote extends tcp.Remote {
-  constructor () {
+  constructor (opts = {}) {
     super()
 
     const announcing = new Map()
 
     this.network = network({
       ephemeral: false,
+      id: opts.id,
+      bootstrap: opts.bootstrap,
+      preferredPort: opts.preferredPort,
       socket (socket) {
         // destroy all incoming sockets
         socket.on('error', () => socket.destroy())
