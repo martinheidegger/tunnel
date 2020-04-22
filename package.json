@@ -11,9 +11,6 @@
   "devDependencies": {
     "standard": "^14.3.1"
   },
-  "bin": {
-    "hyperswarm-tunnel-server": "./server-bin.js"
-  },
   "scripts": {
     "test": "standard"
   },

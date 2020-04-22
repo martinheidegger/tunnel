@@ -43,7 +43,7 @@ const s = l.connect(hash(Buffer.from('a topic to connect on')))
 If you just want to spin up a tunneling server you can run the following cli
 
 ``` sh
-npm install -g @hyperswarm/tunnel
+npm install -g @hyperswarm/cli
 hyperswarm-tunnel-server --port 10000
 ```
 
